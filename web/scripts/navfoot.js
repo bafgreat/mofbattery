@@ -46,7 +46,7 @@ function injectFooter(jsonPath = "data/json/footer.json") {
     const footerDataset = document.getElementById("footerDataset");
     const footerCopyright = document.getElementById("footerCopyright");
 
-    // Social/media links
+
     data.links.forEach(link => {
       const a = document.createElement("a");
       a.href = link.href.startsWith("http") ? link.href : `https://${link.href}`;
@@ -57,30 +57,20 @@ function injectFooter(jsonPath = "data/json/footer.json") {
       footerLinks.appendChild(a);
     });
 
-    // Manuscript
+
     if (data.publication) {
       footerResources.innerHTML = `<a href="${data.publication.href}" target="_blank" class="text-white text-decoration-none">${data.publication.label}</a>`;
     }
 
-    // FAIRMOF dataset
     if (data.dataset) {
       footerDataset.innerHTML = `<a href="${data.dataset.href}" target="_blank" class="text-white text-decoration-none">${data.dataset.label}</a>`;
     }
-
-    // Email
-    // footerEmail.innerHTML = `<a href="mailto:${data.email}" class="text-white text-decoration-none">Contact</a>`;
-
-    // // Copyright
-    // if (data?.copyright) {
-    //   footerCopyright.textContent = data.copyright;
-    // }
   })
   .catch(err => console.error("Failed to load footer.json:", err));
 }
 
 
 
-// Load navbar and footer, then inject nav links after navbar is in DOM
 document.addEventListener("DOMContentLoaded", () => {
   loadComponent("navbar-placeholder", "components/navbar.html", injectNavLinks);
   loadComponent("footer-placeholder", "components/footer.html", injectFooter);
