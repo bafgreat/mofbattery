@@ -13,7 +13,7 @@ function loadComponent(id, file, callback) {
     .catch(error => console.error(error));
 }
 
-function injectNavLinks(jsonPath = "/web/data/json/nav.json") {
+function injectNavLinks(jsonPath = "data/json/nav.json") {
   fetch(jsonPath)
     .then(res => res.json())
     .then(navLinks => {
@@ -36,7 +36,7 @@ function injectNavLinks(jsonPath = "/web/data/json/nav.json") {
 }
 
 
-function injectFooter(jsonPath = "/web/data/json/footer.json") {
+function injectFooter(jsonPath = "data/json/footer.json") {
   fetch(jsonPath)
   .then(res => res.json())
   .then(data => {
@@ -82,6 +82,6 @@ function injectFooter(jsonPath = "/web/data/json/footer.json") {
 
 // Load navbar and footer, then inject nav links after navbar is in DOM
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("navbar-placeholder", "/web/components/navbar.html", injectNavLinks);
-  loadComponent("footer-placeholder", "/web/components/footer.html", injectFooter);
+  loadComponent("navbar-placeholder", "components/navbar.html", injectNavLinks);
+  loadComponent("footer-placeholder", "components/footer.html", injectFooter);
 });
