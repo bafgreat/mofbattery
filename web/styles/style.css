@@ -1,0 +1,108 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #083c5d;
+}
+
+main {
+  flex: 1; /* Pushes footer to bottom */
+}
+
+
+  .nav{
+    background-color:black;
+    color: white;
+
+  }
+  .custom-toggler .navbar-toggler-icon {
+
+    background-color: white;
+
+  }
+
+
+
+  .logo-img {
+    max-height: 50px;
+  }
+
+  @media (max-width: 991.98px) {
+    #navbarNav {
+      text-align: right;
+    }
+    #navbarNav .navbar-nav {
+      align-items: flex-end;
+    }
+  }
+
+
+  /* Enhance the offcanvas panel appearance */
+.offcanvas.offcanvas-end {
+  width: 250px;
+  transition: transform .3s ease-in-out, opacity 0.4s ease-in-out;
+  background-color:black;
+}
+
+.offcanvas.show {
+  opacity: 1;
+}
+
+.offcanvas:not(.show) {
+  opacity: 0;
+}
+
+/* Smooth transition for links inside */
+.offcanvas .nav-link {
+  transition: color 0.3s ease-in-out, padding-left 0.3s;
+}
+
+.offcanvas .nav-link:hover {
+  padding-left: 10px;
+  color: #00d4ff; /* Example accent color */
+}
+
+.nav-link {
+  transition: color 0.2s ease-in-out, border-bottom 0.2s;
+  padding-bottom: 2px;
+}
+
+.nav-link:hover {
+  color: #00d4ff !important;
+  border-bottom: 2px solid #00d4ff;
+}
+
+.nav-link.active {
+  color:#096192;
+  font-weight: bold;
+  border-bottom: 2px solid #096192;
+}
+
+#footerCopyright {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+
+#footerLinks i:hover {
+  color: #00d4ff;
+}
+#footerResources a:hover,
+#footerEmail a:hover {
+  text-decoration: underline;
+  color: #00d4ff;
+}
+
+#loading-spinner {
+  animation: fadeIn 0.3s ease-in-out;
+}
+;
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

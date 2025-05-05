@@ -1,0 +1,15 @@
+ *.py[cod]
+.history
+.pyenv
+.vscode
+poetry.lock
+__pycache__/
+*.egg-info/
+*.egg
+Povray
+examples
+web/data/images/._logo.png
+web/data/images/eu_logo.png
+web/data/images/._eu_logo.png
+._*
+

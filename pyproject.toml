@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mofbattery"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+rdkit = "^2024.9.6"
+mofstructure = "^0.1.8.3"
+torch-geometric = "^2.6.1"
+torch = "2.2.0"
+read-rkf = "^0.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

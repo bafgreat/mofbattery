@@ -1,0 +1,30 @@
+<nav class="navbar navbar-dark nav fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/web/">
+      <img src="/web/data/images/logo.png" alt="Logo" class="img-fluid logo-img" />
+    </a>
+
+    <!-- Toggle for small screens -->
+    <button class="navbar-toggler text-white border-white ms-auto d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Inline nav (large screens) -->
+    <ul id="inlineNav" class="navbar-nav ms-auto d-none d-lg-flex flex-row gap-4"></ul>
+
+    <!-- Offcanvas nav (mobile) -->
+    <div class="offcanvas offcanvas-end nav text-white d-lg-none"
+      tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul id="offcanvasNav" class="navbar-nav"></ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,21 @@
+{
+    "links": [
+      { "label": "LinkedIn", "href": "linkedin.com/in/dinga-wonanke25", "icon": "linkedin" },
+      { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=cEG7oCAAAAAJ&hl=en", "icon": "google" },
+      { "label": "ORCID", "href": "https://orcid.org/0000-0002-9066-2715", "icon": "person-badge" },
+      { "label": "GitHub", "href": "https://github.com/bafgreat", "icon": "github" },
+      { "label": "Zenodo", "href": "https://zenodo.org/record/YOUR-ID", "icon": "database" }
+    ],
+    "publication": {
+      "label": "Publication",
+      "href": "https://doi.org/XXX"
+    },
+    "dataset": {
+      "label": "FAIRMOF",
+      "href": "https://nomad-lab.eu/prod/v1/gui/search/mofs"
+    },
+    "email": "bafgreat@gmail.com",
+    "logo": "",
+    "copyright":
+      "© 2025 Dinga Wonanke. Funded by the European Union (MSCA)."
+  }
