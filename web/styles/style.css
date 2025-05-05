@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  flex: 1; /* Pushes footer to bottom */
+  flex: 1;
 }
 
 
@@ -42,7 +42,6 @@ main {
   }
 
 
-  /* Enhance the offcanvas panel appearance */
 .offcanvas.offcanvas-end {
   width: 250px;
   transition: transform .3s ease-in-out, opacity 0.4s ease-in-out;
@@ -57,14 +56,13 @@ main {
   opacity: 0;
 }
 
-/* Smooth transition for links inside */
 .offcanvas .nav-link {
   transition: color 0.3s ease-in-out, padding-left 0.3s;
 }
 
 .offcanvas .nav-link:hover {
   padding-left: 10px;
-  color: #00d4ff; /* Example accent color */
+  color: #00d4ff; 
 }
 
 .nav-link {
