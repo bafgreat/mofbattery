@@ -1,0 +1,296 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 26,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 0,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 36,
+        "Halide (Cl)": 0,
+        "Halide (Br)": 0,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 5,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 75,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "C": 108,
+        "O": 72,
+        "F": 36,
+        "Zn": 12
+    },
+    "metal_sites": {
+        "Zn_9": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_16": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_24": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_40": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_48": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_62": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_69": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_76": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_100": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_107": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_135": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Zn_195": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 5,
+            "aromatic": false,
+            "heteroatoms": [
+                "O",
+                "Zn"
+            ],
+            "atom_indices": [
+                16,
+                17,
+                18,
+                19,
+                33
+            ],
+            "description": "5-membered with heteroatoms (O, Zn)"
+        },
+        {
+            "size": 5,
+            "aromatic": false,
+            "heteroatoms": [
+                "O",
+                "Zn"
+            ],
+            "atom_indices": [
+                40,
+                41,
+                42,
+                43,
+                57
+            ],
+            "description": "5-membered with heteroatoms (O, Zn)"
+        },
+        {
+            "size": 88,
+            "aromatic": false,
+            "heteroatoms": [
+                "O",
+                "Zn"
+            ],
+            "atom_indices": [
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                81,
+                83,
+                85,
+                86,
+                87,
+                89,
+                90,
+                91,
+                92,
+                93,
+                95,
+                96,
+                97,
+                99,
+                100,
+                101,
+                102,
+                103,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                113,
+                114,
+                115,
+                121,
+                122,
+                123,
+                124,
+                125,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                143,
+                144,
+                145,
+                146,
+                147,
+                150,
+                151,
+                152,
+                153,
+                156,
+                157,
+                158,
+                159,
+                160,
+                162,
+                163,
+                164,
+                165,
+                166,
+                168,
+                170,
+                172,
+                173,
+                174,
+                176,
+                177,
+                179,
+                180
+            ],
+            "description": "88-membered with heteroatoms (O, Zn)"
+        }
+    ]
+}

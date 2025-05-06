@@ -1,0 +1,202 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 2,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 0,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 18,
+        "Halide (Br)": 0,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 3,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 3,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 71,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "La": 6,
+        "O": 44,
+        "C": 52,
+        "Cl": 18,
+        "S": 8,
+        "H": 9
+    },
+    "metal_sites": {
+        "La_0": {
+            "coordination_number": 5,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "La_6": {
+            "coordination_number": 7,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "La_24": {
+            "coordination_number": 7,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "La_42": {
+            "coordination_number": 8,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "La_48": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "La_86": {
+            "coordination_number": 10,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 41,
+            "aromatic": false,
+            "heteroatoms": [
+                "La",
+                "O"
+            ],
+            "atom_indices": [
+                0,
+                2,
+                3,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                14,
+                19,
+                20,
+                23,
+                24,
+                25,
+                26,
+                28,
+                29,
+                30,
+                31,
+                37,
+                38,
+                41,
+                42,
+                43,
+                44,
+                47,
+                48,
+                49,
+                50,
+                51,
+                53,
+                54,
+                56,
+                61,
+                62,
+                63,
+                66,
+                67,
+                68
+            ],
+            "description": "41-membered with heteroatoms (La, O)"
+        },
+        {
+            "size": 10,
+            "aromatic": false,
+            "heteroatoms": [
+                "La",
+                "O"
+            ],
+            "atom_indices": [
+                86,
+                87,
+                88,
+                91,
+                92,
+                93,
+                94,
+                100,
+                101,
+                102
+            ],
+            "description": "10-membered with heteroatoms (La, O)"
+        }
+    ]
+}

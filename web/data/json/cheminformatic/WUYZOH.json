@@ -1,0 +1,593 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 0,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 2,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 0,
+        "Halide (Br)": 0,
+        "Halide (I)": 28,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 2,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 58,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "I": 28,
+        "Cu": 20,
+        "Fe": 4,
+        "N": 24,
+        "C": 120,
+        "H": 16
+    },
+    "metal_sites": {
+        "Cu_2": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "I",
+                "I",
+                "I",
+                "Cu",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_5": {
+            "coordination_number": 5,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "I",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_8": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_10": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "Cu",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_11": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "I",
+                "Cu",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_14": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "Cu"
+            ]
+        },
+        "Cu_16": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "I",
+                "Cu"
+            ]
+        },
+        "Cu_19": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_21": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "Cu"
+            ]
+        },
+        "Cu_23": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "Cu"
+            ]
+        },
+        "Cu_26": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "I",
+                "I",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_28": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_30": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "Cu"
+            ]
+        },
+        "Cu_32": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "I",
+                "Cu"
+            ]
+        },
+        "Cu_35": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "Cu",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_37": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "I",
+                "I",
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_39": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "Cu",
+                "I",
+                "Cu"
+            ]
+        },
+        "Cu_41": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "Cu",
+                "Cu"
+            ]
+        },
+        "Cu_43": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "I",
+                "Cu"
+            ]
+        },
+        "Cu_44": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "Cu",
+                "I"
+            ]
+        },
+        "Fe_48": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "N",
+                "N",
+                "N",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Fe_84": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "N",
+                "N",
+                "N",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Fe_107": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "N",
+                "N",
+                "N",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Fe_143": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "N",
+                "N",
+                "N",
+                "N",
+                "N",
+                "N"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu"
+            ],
+            "atom_indices": [
+                2,
+                5,
+                8,
+                10,
+                11,
+                19
+            ],
+            "description": "6-membered with heteroatoms (Cu)"
+        },
+        {
+            "size": 3,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu"
+            ],
+            "atom_indices": [
+                11,
+                14,
+                16
+            ],
+            "description": "3-membered with heteroatoms (Cu)"
+        },
+        {
+            "size": 5,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu"
+            ],
+            "atom_indices": [
+                26,
+                28,
+                30,
+                32,
+                35
+            ],
+            "description": "5-membered with heteroatoms (Cu)"
+        },
+        {
+            "size": 3,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu"
+            ],
+            "atom_indices": [
+                37,
+                39,
+                41
+            ],
+            "description": "3-membered with heteroatoms (Cu)"
+        },
+        {
+            "size": 13,
+            "aromatic": false,
+            "heteroatoms": [
+                "Fe",
+                "N"
+            ],
+            "atom_indices": [
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                61,
+                62,
+                63,
+                64
+            ],
+            "description": "13-membered with heteroatoms (N, Fe)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                49,
+                50,
+                57,
+                58,
+                59,
+                60
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                61,
+                62,
+                69,
+                70,
+                71,
+                72
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 9,
+            "aromatic": false,
+            "heteroatoms": [
+                "Fe",
+                "N"
+            ],
+            "atom_indices": [
+                48,
+                73,
+                74,
+                75,
+                76,
+                80,
+                81,
+                82,
+                83
+            ],
+            "description": "9-membered with heteroatoms (N, Fe)"
+        },
+        {
+            "size": 13,
+            "aromatic": false,
+            "heteroatoms": [
+                "Fe",
+                "N"
+            ],
+            "atom_indices": [
+                84,
+                85,
+                86,
+                87,
+                88,
+                95,
+                96,
+                97,
+                98,
+                102,
+                103,
+                104,
+                105
+            ],
+            "description": "13-membered with heteroatoms (N, Fe)"
+        },
+        {
+            "size": 17,
+            "aromatic": false,
+            "heteroatoms": [
+                "Fe",
+                "N"
+            ],
+            "atom_indices": [
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                119,
+                120,
+                121,
+                122,
+                131,
+                132,
+                133,
+                134
+            ],
+            "description": "17-membered with heteroatoms (N, Fe)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                121,
+                122,
+                123,
+                124,
+                125,
+                126
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                119,
+                120,
+                127,
+                128,
+                129,
+                130
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                133,
+                134,
+                135,
+                136,
+                137,
+                138
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                131,
+                132,
+                139,
+                140,
+                141,
+                142
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 13,
+            "aromatic": false,
+            "heteroatoms": [
+                "Fe",
+                "N"
+            ],
+            "atom_indices": [
+                143,
+                144,
+                145,
+                146,
+                147,
+                149,
+                150,
+                151,
+                152,
+                155,
+                156,
+                157,
+                158
+            ],
+            "description": "13-membered with heteroatoms (N, Fe)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                157,
+                158,
+                159,
+                160,
+                161,
+                162
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                155,
+                156,
+                163,
+                164,
+                165,
+                166
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        }
+    ]
+}

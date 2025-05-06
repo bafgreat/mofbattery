@@ -1,0 +1,314 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 0,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 4,
+        "Isocyanate": 0,
+        "Ether": 6,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 0,
+        "Halide (Br)": 0,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 2,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 54,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "Eu": 4,
+        "O": 52,
+        "C": 116,
+        "N": 20,
+        "Ni": 4,
+        "H": 26
+    },
+    "metal_sites": {
+        "Eu_0": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Eu_19": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Eu_32": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Eu_51": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Ni_64": {
+            "coordination_number": 5,
+            "donor_atoms": [
+                "O",
+                "N",
+                "O",
+                "N",
+                "N"
+            ]
+        },
+        "Ni_94": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Ni_110": {
+            "coordination_number": 5,
+            "donor_atoms": [
+                "O",
+                "N",
+                "O",
+                "N",
+                "N"
+            ]
+        },
+        "Ni_140": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 4,
+            "aromatic": false,
+            "heteroatoms": [
+                "Eu",
+                "O"
+            ],
+            "atom_indices": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "description": "4-membered with heteroatoms (O, Eu)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 4,
+            "aromatic": false,
+            "heteroatoms": [
+                "Eu",
+                "O"
+            ],
+            "atom_indices": [
+                19,
+                20,
+                21,
+                22
+            ],
+            "description": "4-membered with heteroatoms (O, Eu)"
+        },
+        {
+            "size": 4,
+            "aromatic": false,
+            "heteroatoms": [
+                "Eu",
+                "O"
+            ],
+            "atom_indices": [
+                32,
+                33,
+                34,
+                35
+            ],
+            "description": "4-membered with heteroatoms (O, Eu)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                38,
+                39,
+                40,
+                41,
+                42,
+                43
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 4,
+            "aromatic": false,
+            "heteroatoms": [
+                "Eu",
+                "O"
+            ],
+            "atom_indices": [
+                51,
+                52,
+                53,
+                54
+            ],
+            "description": "4-membered with heteroatoms (O, Eu)"
+        },
+        {
+            "size": 18,
+            "aromatic": false,
+            "heteroatoms": [
+                "N",
+                "Ni",
+                "O"
+            ],
+            "atom_indices": [
+                64,
+                65,
+                66,
+                67,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                83,
+                84
+            ],
+            "description": "18-membered with heteroatoms (O, Ni, N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                87,
+                88,
+                89,
+                90,
+                92,
+                93
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 18,
+            "aromatic": false,
+            "heteroatoms": [
+                "N",
+                "Ni",
+                "O"
+            ],
+            "atom_indices": [
+                110,
+                111,
+                112,
+                113,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                129,
+                130
+            ],
+            "description": "18-membered with heteroatoms (O, Ni, N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                133,
+                134,
+                135,
+                136,
+                138,
+                139
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        }
+    ]
+}

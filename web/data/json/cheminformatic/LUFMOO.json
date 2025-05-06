@@ -1,0 +1,125 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 0,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 8,
+        "Imine": 0,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 0,
+        "Halide (Br)": 2,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 0,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 0,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "W": 2,
+        "C": 36,
+        "Cu": 4,
+        "S": 8,
+        "N": 8,
+        "Br": 2,
+        "H": 4
+    },
+    "metal_sites": {
+        "W_0": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "C"
+            ]
+        },
+        "Cu_11": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "S",
+                "S"
+            ]
+        },
+        "Cu_16": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "S",
+                "S"
+            ]
+        },
+        "Cu_24": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "S",
+                "S"
+            ]
+        },
+        "Cu_29": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "S",
+                "S"
+            ]
+        },
+        "W_43": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "C"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 5,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "description": "5-membered"
+        },
+        {
+            "size": 5,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                44,
+                45,
+                46,
+                48,
+                49
+            ],
+            "description": "5-membered"
+        }
+    ]
+}

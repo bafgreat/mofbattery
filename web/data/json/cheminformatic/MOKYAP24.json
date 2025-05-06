@@ -1,0 +1,321 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 6,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 0,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 0,
+        "Halide (Br)": 0,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 0,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 52,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "Cu": 18,
+        "O": 54,
+        "C": 72,
+        "H": 6
+    },
+    "metal_sites": {
+        "Cu_0": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cu_8": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cu_24": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cu_31": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "O",
+                "O"
+            ]
+        },
+        "Cu_41": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Cu_46": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cu_54": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Cu_66": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "O",
+                "O"
+            ]
+        },
+        "Cu_70": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Cu_79": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "O",
+                "O"
+            ]
+        },
+        "Cu_86": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cu_94": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Cu_97": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cu_104": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cu_118": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "O",
+                "O"
+            ]
+        },
+        "Cu_125": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cu_140": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Cu_143": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 14,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu",
+                "O"
+            ],
+            "atom_indices": [
+                0,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                15,
+                16,
+                17,
+                18,
+                19,
+                21
+            ],
+            "description": "14-membered with heteroatoms (Cu, O)"
+        },
+        {
+            "size": 32,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu",
+                "O"
+            ],
+            "atom_indices": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                33,
+                34,
+                38,
+                39,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                68,
+                69
+            ],
+            "description": "32-membered with heteroatoms (Cu, O)"
+        },
+        {
+            "size": 10,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu",
+                "O"
+            ],
+            "atom_indices": [
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                81,
+                85,
+                86,
+                87
+            ],
+            "description": "10-membered with heteroatoms (Cu, O)"
+        },
+        {
+            "size": 14,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu",
+                "O"
+            ],
+            "atom_indices": [
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                108,
+                109,
+                110
+            ],
+            "description": "14-membered with heteroatoms (Cu, O)"
+        },
+        {
+            "size": 10,
+            "aromatic": false,
+            "heteroatoms": [
+                "Cu",
+                "O"
+            ],
+            "atom_indices": [
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                132,
+                133,
+                134,
+                135
+            ],
+            "description": "10-membered with heteroatoms (Cu, O)"
+        }
+    ]
+}

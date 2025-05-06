@@ -1,0 +1,565 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 0,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 8,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 0,
+        "Halide (Br)": 0,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 0,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 36,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "Co": 8,
+        "O": 56,
+        "Cr": 16,
+        "N": 32,
+        "C": 160
+    },
+    "metal_sites": {
+        "Co_0": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "N",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Cr_3": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cr_5": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_9": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "N",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Cr_11": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_36": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "N",
+                "O",
+                "O",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Cr_38": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "O",
+                "O"
+            ]
+        },
+        "Cr_41": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cr_43": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_80": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "N",
+                "O",
+                "O",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Cr_83": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_121": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "N",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Cr_124": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cr_126": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_130": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "N",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Cr_132": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_157": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "N",
+                "O",
+                "O",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Cr_159": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "O",
+                "O"
+            ]
+        },
+        "Cr_162": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cr_164": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_201": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "N",
+                "O",
+                "O",
+                "N",
+                "N",
+                "N"
+            ]
+        },
+        "Cr_204": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Cr_242": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Cr_244": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                32,
+                33,
+                34,
+                35,
+                58,
+                59
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                48,
+                49,
+                50,
+                51,
+                52,
+                53
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                60,
+                61,
+                62,
+                63,
+                68,
+                69
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                72,
+                73,
+                74,
+                75,
+                109,
+                110
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                76,
+                77,
+                78,
+                79,
+                107,
+                108
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                87,
+                88,
+                89,
+                90,
+                94,
+                95
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                96,
+                97,
+                98,
+                99,
+                100,
+                101
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                153,
+                154,
+                155,
+                156,
+                179,
+                180
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                169,
+                170,
+                171,
+                172,
+                173,
+                174
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                181,
+                182,
+                183,
+                184,
+                189,
+                190
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                193,
+                194,
+                195,
+                196,
+                230,
+                231
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                197,
+                198,
+                199,
+                200,
+                228,
+                229
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                208,
+                209,
+                210,
+                211,
+                215,
+                216
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                217,
+                218,
+                219,
+                220,
+                221,
+                222
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        }
+    ]
+}

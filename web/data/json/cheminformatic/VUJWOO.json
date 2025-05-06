@@ -1,0 +1,196 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 0,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 0,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 6,
+        "Halide (Br)": 0,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 0,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 14,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "C": 82,
+        "Pd": 2,
+        "Cl": 6,
+        "N": 4,
+        "S": 18,
+        "O": 26,
+        "Na": 6,
+        "H": 20
+    },
+    "metal_sites": {
+        "Pd_1": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "C",
+                "Cl",
+                "Cl",
+                "Cl"
+            ]
+        },
+        "Na_30": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Na_38": {
+            "coordination_number": 0,
+            "donor_atoms": []
+        },
+        "Na_45": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Na_55": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        },
+        "Pd_72": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "C",
+                "Cl",
+                "Cl",
+                "Cl"
+            ]
+        },
+        "Na_108": {
+            "coordination_number": 0,
+            "donor_atoms": []
+        },
+        "Na_119": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "O"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 5,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                0,
+                5,
+                18,
+                19,
+                20
+            ],
+            "description": "5-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                6,
+                7,
+                11,
+                12,
+                13,
+                14
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                21,
+                22,
+                26,
+                27,
+                33,
+                34
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                58,
+                59,
+                60,
+                64,
+                65,
+                69
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 5,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                70,
+                71,
+                76,
+                77,
+                78
+            ],
+            "description": "5-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                79,
+                80,
+                84,
+                85,
+                86,
+                87
+            ],
+            "description": "6-membered"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
-import pybel
+import argparse
+from openbabel import pybel
 from rdkit import Chem
-from rdkit.Chem import AllChem
+
 
 class FunctionalGroupAnalyzer:
     """
@@ -107,6 +108,93 @@ class FunctionalGroupAnalyzer:
             raise ValueError("Failed to parse CIF to RDKit Mol.")
         return rdmol
 
+    def count_ring_systems(self):
+        """
+        Count distinct ring systems (including fused rings like naphthalene as one).
+
+        Returns:
+            int: Number of distinct ring systems.
+        """
+        ri = self.rdkit_mol.GetRingInfo()
+        atom_rings = ri.AtomRings()
+        ring_sets = []
+        for ring in atom_rings:
+            ring_set = set(ring)
+            added = False
+            for existing in ring_sets:
+                if ring_set & existing:
+                    existing.update(ring_set)
+                    added = True
+                    break
+            if not added:
+                ring_sets.append(set(ring_set))
+
+        return len(ring_sets)
+
+    def analyze_ring_systems(self):
+        """
+        Analyze distinct ring systems, including their size, aromaticity, and heteroatom content.
+
+        Returns:
+            list of dict: Each dict describes a ring system with its size, aromaticity, and atom types.
+        """
+        ri = self.rdkit_mol.GetRingInfo()
+        atom_rings = ri.AtomRings()
+        ring_sets = []
+
+        # Step 1: Group fused rings into unified ring systems
+        for ring in atom_rings:
+            ring_set = set(ring)
+            added = False
+            for existing in ring_sets:
+                if ring_set & existing:
+                    existing.update(ring_set)
+                    added = True
+                    break
+            if not added:
+                ring_sets.append(set(ring_set))
+
+        # Step 2: Analyze each ring system
+        ring_systems = []
+        for ring_atoms in ring_sets:
+            atoms = [self.rdkit_mol.GetAtomWithIdx(idx) for idx in ring_atoms]
+            symbols = [atom.GetSymbol() for atom in atoms]
+            is_aromatic = all(atom.GetIsAromatic() for atom in atoms)
+            heteroatoms = {s for s in symbols if s not in {"C", "H"}}
+            ring_systems.append({
+                "size": len(ring_atoms),
+                "aromatic": is_aromatic,
+                "heteroatoms": list(sorted(heteroatoms)),
+                "atom_indices": sorted(ring_atoms),
+                "description": self._describe_ring_type(len(ring_atoms), is_aromatic, heteroatoms)
+            })
+
+        return ring_systems
+
+    def _describe_ring_type(self, size, aromatic, heteroatoms):
+        """
+        Generate a human-readable description for a ring system.
+        """
+        base = f"{size}-membered"
+        if aromatic:
+            base = "Aromatic " + base
+        if heteroatoms:
+            base += f" with heteroatoms ({', '.join(heteroatoms)})"
+        return base
+
+    def count_unique_atoms(self):
+        """
+        Count the number of unique atoms by atomic symbol.
+
+        Returns:
+            dict: Dictionary of atomic symbols and their counts.
+        """
+        atom_counts = {}
+        for atom in self.rdkit_mol.GetAtoms():
+            symbol = atom.GetSymbol()
+            atom_counts[symbol] = atom_counts.get(symbol, 0) + 1
+        return atom_counts
+
     def count_functional_groups(self):
         """
         Count occurrences of defined SMARTS patterns in the molecule.
@@ -143,10 +231,47 @@ class FunctionalGroupAnalyzer:
                 }
         return metal_envs
 
+    def summarize_chemical_features(self):
+        """
+        Summarize all chemical features into a single dictionary.
+        """
+        summary = {
+            "functional_groups": self.count_functional_groups(),
+            "unique_atoms": self.count_unique_atoms(),
+            "metal_sites": self.analyze_metal_sites(),
+            "ring_systems": self.analyze_ring_systems()
+        }
+        return summary
 
-if __name__ == "__main__":
-    cif_file = "your_structure.cif"  
-    analyzer = FunctionalGroupAnalyzer(cif_file)
-    results = analyzer.count_functional_groups()
-    for group, count in results.items():
-        print(f"{group}: {count}")
+
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description="Analyze CIF structure for functional groups, ring systems, and metal environments.")
+#     parser.add_argument("cif_file", help="Path to the CIF file to analyze.")
+#     args = parser.parse_args()
+
+#     analyzer = FunctionalGroupAnalyzer(args.cif_file)
+#     summary = analyzer.summarize_chemical_features()
+
+#     print("\nFunctional Groups:")
+#     for group, count in summary["functional_groups"].items():
+#         if count > 0:
+#             print(f"  {group}: {count}")
+
+#     print("\nUnique Atom Counts:")
+#     for atom, count in summary["unique_atoms"].items():
+#         print(f"  {atom}: {count}")
+
+#     print("\nMetal Sites:")
+#     if summary["metal_sites"]:
+#         for metal, env in summary["metal_sites"].items():
+#             print(f"  {metal}:")
+#             print(f"    Coordination Number: {env['coordination_number']}")
+#             print(f"    Donor Atoms: {', '.join(env['donor_atoms'])}")
+#     else:
+#         print("  No metal centers detected.")
+
+#     print("\nRing Systems:")
+#     for i, ring in enumerate(summary["ring_systems"], 1):
+#         print(f"  Ring {i}:")
+#         print(f"    Description: {ring['description']}")
+#         print(f"    Atom Indices: {ring['atom_indices']}")

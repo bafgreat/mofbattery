@@ -1,0 +1,110 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 0,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 0,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 0,
+        "Halide (Br)": 0,
+        "Halide (I)": 2,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 4,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 18,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "I": 2,
+        "Cu": 2,
+        "P": 8,
+        "N": 12,
+        "C": 12,
+        "H": 4
+    },
+    "metal_sites": {
+        "Cu_1": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "I",
+                "P"
+            ]
+        },
+        "Cu_20": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "P",
+                "I"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N",
+                "P"
+            ],
+            "atom_indices": [
+                8,
+                9,
+                11,
+                12,
+                14,
+                15
+            ],
+            "description": "6-membered with heteroatoms (P, N)"
+        },
+        {
+            "size": 10,
+            "aromatic": false,
+            "heteroatoms": [
+                "N",
+                "P"
+            ],
+            "atom_indices": [
+                21,
+                22,
+                24,
+                25,
+                27,
+                28,
+                29,
+                30,
+                32,
+                33
+            ],
+            "description": "10-membered with heteroatoms (N, P)"
+        }
+    ]
+}

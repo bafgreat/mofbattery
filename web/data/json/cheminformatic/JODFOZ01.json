@@ -1,0 +1,243 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 2,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 0,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 0,
+        "Halide (Br)": 0,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 0,
+        "Sulfonamide": 0,
+        "3-membered ring": 0,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 42,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "Co": 4,
+        "N": 8,
+        "C": 112,
+        "O": 16,
+        "H": 4
+    },
+    "metal_sites": {
+        "Co_0": {
+            "coordination_number": 5,
+            "donor_atoms": [
+                "N",
+                "N",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_31": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "N",
+                "O",
+                "N",
+                "O",
+                "O"
+            ]
+        },
+        "Co_66": {
+            "coordination_number": 5,
+            "donor_atoms": [
+                "N",
+                "N",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        "Co_87": {
+            "coordination_number": 6,
+            "donor_atoms": [
+                "O",
+                "O",
+                "N",
+                "N",
+                "O",
+                "O"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                1,
+                2,
+                3,
+                4,
+                12,
+                13
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                14,
+                15,
+                16,
+                17,
+                21,
+                22
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 4,
+            "aromatic": false,
+            "heteroatoms": [
+                "Co",
+                "O"
+            ],
+            "atom_indices": [
+                0,
+                24,
+                25,
+                27
+            ],
+            "description": "4-membered with heteroatoms (O, Co)"
+        },
+        {
+            "size": 7,
+            "aromatic": false,
+            "heteroatoms": [
+                "Co",
+                "O"
+            ],
+            "atom_indices": [
+                29,
+                30,
+                31,
+                36,
+                37,
+                42,
+                55
+            ],
+            "description": "7-membered with heteroatoms (O, Co)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                43,
+                44,
+                45,
+                46,
+                53,
+                54
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [
+                "N"
+            ],
+            "atom_indices": [
+                60,
+                61,
+                62,
+                63,
+                64,
+                65
+            ],
+            "description": "6-membered with heteroatoms (N)"
+        },
+        {
+            "size": 4,
+            "aromatic": false,
+            "heteroatoms": [
+                "Co",
+                "O"
+            ],
+            "atom_indices": [
+                66,
+                70,
+                71,
+                73
+            ],
+            "description": "4-membered with heteroatoms (O, Co)"
+        },
+        {
+            "size": 7,
+            "aromatic": false,
+            "heteroatoms": [
+                "Co",
+                "O"
+            ],
+            "atom_indices": [
+                85,
+                86,
+                87,
+                88,
+                89,
+                93,
+                101
+            ],
+            "description": "7-membered with heteroatoms (O, Co)"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                121,
+                122,
+                123,
+                124,
+                125,
+                126
+            ],
+            "description": "6-membered"
+        }
+    ]
+}

@@ -1,0 +1,312 @@
+{
+    "functional_groups": {
+        "Carboxylic Acid": 0,
+        "Sulfonic Acid": 0,
+        "Phenol": 0,
+        "Thiols": 0,
+        "Primary Amine": 0,
+        "Secondary Amine": 0,
+        "Tertiary Amine": 0,
+        "Guanidine": 0,
+        "Pyridine-like": 0,
+        "Ketone": 0,
+        "Aldehyde": 0,
+        "Amide": 0,
+        "Ester": 0,
+        "Urea": 0,
+        "Thioamide": 0,
+        "Imide": 0,
+        "Anhydride": 0,
+        "Nitrile": 0,
+        "Imine": 0,
+        "Isocyanate": 0,
+        "Ether": 0,
+        "Thioether (Sulfide)": 0,
+        "Disulfide": 0,
+        "Halide (F)": 0,
+        "Halide (Cl)": 2,
+        "Halide (Br)": 0,
+        "Halide (I)": 0,
+        "Phosphate": 0,
+        "Phosphine": 1,
+        "Sulfonamide": 0,
+        "3-membered ring": 0,
+        "4-membered ring": 0,
+        "5-membered ring": 0,
+        "6-membered ring": 0,
+        "7-membered ring": 0,
+        "Macrocycle (\u22658 atoms)": 0,
+        "Aromatic Ring (6 atoms)": 0,
+        "Heterocycle (N/O/S)": 0,
+        "Porphyrin-like": 0,
+        "Phthalocyanine-like": 0,
+        "Crown Ether (18-crown-6)": 0,
+        "Cyclodextrin-like": 0
+    },
+    "unique_atoms": {
+        "C": 120,
+        "Se": 14,
+        "Cd": 8,
+        "Cl": 2,
+        "P": 2,
+        "H": 7
+    },
+    "metal_sites": {
+        "Cd_7": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "Se",
+                "Se",
+                "Se"
+            ]
+        },
+        "Cd_22": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "Se",
+                "Se"
+            ]
+        },
+        "Cd_34": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "Cl"
+            ]
+        },
+        "Cd_37": {
+            "coordination_number": 3,
+            "donor_atoms": [
+                "Se",
+                "P",
+                "Se"
+            ]
+        },
+        "Cd_78": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "Se",
+                "Se"
+            ]
+        },
+        "Cd_88": {
+            "coordination_number": 1,
+            "donor_atoms": [
+                "Cl"
+            ]
+        },
+        "Cd_91": {
+            "coordination_number": 2,
+            "donor_atoms": [
+                "Se",
+                "Se"
+            ]
+        },
+        "Cd_106": {
+            "coordination_number": 4,
+            "donor_atoms": [
+                "Se",
+                "P",
+                "Se",
+                "Se"
+            ]
+        }
+    },
+    "ring_systems": [
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                47,
+                48,
+                49,
+                50,
+                51,
+                52
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                60,
+                61,
+                62,
+                63,
+                64,
+                65
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                80,
+                81,
+                82,
+                83,
+                84,
+                85
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                93,
+                94,
+                95,
+                96,
+                97,
+                98
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                99,
+                100,
+                101,
+                102,
+                103,
+                104
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                108,
+                109,
+                110,
+                111,
+                112,
+                113
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                124,
+                125,
+                126,
+                127,
+                128,
+                129
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+            ],
+            "description": "6-membered"
+        },
+        {
+            "size": 6,
+            "aromatic": false,
+            "heteroatoms": [],
+            "atom_indices": [
+                137,
+                138,
+                139,
+                140,
+                141,
+                142
+            ],
+            "description": "6-membered"
+        }
+    ]
+}
