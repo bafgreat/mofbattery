@@ -6,10 +6,13 @@ class ClusterComparison extends HTMLElement {
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <style>
+       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
       :host {
         display: block;
-        padding: 1rem;
-        font-family: 'Segoe UI', sans-serif;
+        padding: 1.5 rem;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 0.5px;
+        line-height: 1.6;
         background-color:#083c5d;
       }
 
@@ -18,27 +21,30 @@ class ClusterComparison extends HTMLElement {
         font-weight: 700;
         margin: 2rem 0 1rem;
         color: white;
+        font-size: 2rem;
         }
 
       .chart-card {
-          background: #fff;
+          background:black;
           border-radius: 1rem;
           padding: 1rem;
+          justify-content: center;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
           height: 100%;
         }
 
       .chart-title {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
         text-align: center;
-        color: #444;
+        color: white;
       }
 
         canvas {
           width: 100% !important;
           height: 500px !important;
+          color: transparent;
         }
 
         .cluster-grid {
@@ -46,6 +52,7 @@ class ClusterComparison extends HTMLElement {
           grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
           gap: 1rem;
           margin: 2rem 0;
+          color: white;
         }
 
         .cluster-box {
@@ -56,6 +63,7 @@ class ClusterComparison extends HTMLElement {
         text-align: center;
         font-weight: 600;
         cursor: pointer;
+        font-size: 1rem;
         transition: all 0.3s;
         color: #333;
         }
@@ -91,30 +99,32 @@ class ClusterComparison extends HTMLElement {
         }
 
     table {
-        background-color: #fff;
+        background-color:transparent; ;
         border-radius: 0.5rem;
         overflow: hidden;
       }
 
       th {
-        background-color: #D6EFFF;
+        background-color:transparent;
         text-align: center;
         font-weight: 600;
         color: #333;
+        font-size: 1rem;
       }
 
       td {
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         color: #444;
       }
 
       .viewer-section {
         margin-top: 1.5rem;
         padding: 1rem;
-        background: #eef5fc;
+        background:transparent;
         border: 1px solid #ccc;
         border-radius: 0.5rem;
+        font-size: 1,5rem;
       }
 
       .viewer-section h4 {
@@ -128,11 +138,11 @@ class ClusterComparison extends HTMLElement {
         }
 
         .viewer-canvas {
-          width: 100%;
-          height: 400px;
+          width: 200%;
+          height: 300px;
           border: 1px solid #ccc;
           border-radius: 0.5rem;
-          background: #ff;
+          background: transparent;
         }
       </style>
 
@@ -267,7 +277,7 @@ class ClusterComparison extends HTMLElement {
     col.className = 'col-12'; // full width for readability
     col.innerHTML = `
       <div class="chart-card">
-        <div class="chart-title">${title}</div>
+        <div class="chart-title text-white">${title}</div>
         <canvas id="${canvasId}"></canvas>
       </div>
     `;
@@ -287,17 +297,20 @@ class ClusterComparison extends HTMLElement {
         plugins: {
           legend: {
             position: 'top',
-            labels: { font: { size: 11 } }
-          }
+            labels: { font: { size: 12 } , color: 'white' , usePointStyle: true }
+          },
         },
         scales: {
           x: {
-            title: { display: true, text: title },
+            title: { display: true, color:"white", text: title, font: { size: 14 } },
+            ticks: { color: 'white', font: { size: 12 } },
             stacked: false
           },
           y: {
             beginAtZero: true,
-            title: { display: true, text: 'Count' }
+            title: { display: true, color:"white", text: 'Count', font: { size: 14 } },
+            ticks: { color: 'white', font: { size: 12 } },
+            grid: { color: '#f0f0f0' },
           }
         }
       }
@@ -357,8 +370,9 @@ class ClusterComparison extends HTMLElement {
               labels: {
                 usePointStyle: true,
                 pointStyle: 'circle',
-                boxWidth: 8,
-                font: { size: 10 }
+                boxWidth: 10,
+                color: 'white',
+                font: { size: 12 }
               }
             },
             tooltip: {
@@ -381,13 +395,15 @@ class ClusterComparison extends HTMLElement {
           },
           scales: {
             x: {
-              title: { display: true, text: 'Energy (kcal/mol)' },
-              ticks: { precision: 0 },
+              title: { display: true,  color:"white", text: 'Energy (kcal/mol)' , font: { size: 14 } },
+              ticks: { precision: 0, color: 'white', font: { size: 12 } },
               grid: { drawOnChartArea: false }
+
             },
             y: {
-              title: { display: true, text: prop.label },
-              grid: { color: '#f0f0f0' }
+              title: { display: true, color:'white',  text: prop.label, font: { size: 14 } },
+              grid: { color: 'white' },
+              ticks: { color: 'white', font: { size: 12 } },
             }
           }
         }
@@ -419,7 +435,7 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
     const entries = this.clusters[clusterId];
 
     const table = document.createElement('table');
-    table.className = 'table table-hover table-bordered table-striped shadow-md';
+    table.className = 'table table-hover table-bordered table-striped bg-light rounded-3 shadow-md';
     table.innerHTML = `
       <thead class="table-info">
         <tr>
@@ -473,9 +489,9 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
         const viewerSection = document.createElement('div');
         viewerSection.className = 'viewer-section';
         viewerSection.innerHTML = `
-          <h4 class="text-center mb-2">Refcode: ${refcode}</h4>
+          <h4 class="text-center text-white mb-2">Refcode: ${refcode}</h4>
           <mof-chart data-path="data/json/cheminformatic/${refcode}.json"></mof-chart>
-          <p class="text-muted text-center mt-3"> View and Download Structure </p>
+          // <p class="text-muted text-center mt-3"> </p>
         `;
         container.appendChild(viewerSection);
 
@@ -485,11 +501,11 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
 
         // Create Bootstrap viewer card in light DOM
         const viewerCard = document.createElement('div');
-        viewerCard.className = 'card shadow border-0 my-4';
+        viewerCard.className = 'card border-0 my-4';
         viewerCard.innerHTML = `
-      <div class="card-body ">
-        <h5 class="card-title text-center">3D Structure: ${refcode}</h5>
-        <div id="viewer-${refcode}" class="structure-canvas mx-auto mb-3"></div>
+      <div class="card-body">
+        <h5 class="card-title text-center"> 3D Structure of ${refcode}</h5>
+        <div id="viewer-${refcode}" class="mx-auto my-4"></div>
         <div class="text-center">
           <a href="data/cifs/${refcode}.cif" download class="btn btn-outline-primary">
             <i class="bi bi-download"></i> Download CIF
@@ -505,10 +521,10 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
           width: '100%',
           maxWidth: '960px',
           height: '400px',
-          // border: '1px solid #ccc',
           borderRadius: '0.5rem',
           background: '#fff',
-          margin: '0 auto'
+          margin: '0 auto',
+          position: 'relative' // required for child canvas positioning
         });
 
         try {

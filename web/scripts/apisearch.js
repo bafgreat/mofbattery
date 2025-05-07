@@ -9,7 +9,7 @@ const pageSizeArticlesPerYear = 2;
 const atomAliases = {
   "Li": ["Li", "Li+", "Lithium", "lithium", "Li metal", "Lithium metal", "lithium metal", "Li⁰", "Li(0)", "metallic lithium", "Metallic Lithium"],
   "LiS": ["LiS", "Li-S", "Li/S", "Li–S", "Lithium-sulfur", "lithium-sulfur", "Lithium sulfur", "lithium sulfur", "Lithium–sulfur", "Lithium sulphur", "lithium sulphur", "Li–Sulphur", "Li/S battery", "Li-S battery", "Lithium sulfur battery", "Lithium-sulfur battery", "Lithium sulphur battery"],
-  "LiO": ["LiO", "Li-O", "Li/O", "Li–O", "Lithium oxide battery", "lithium oxide battery", "Lithium-oxide battery", "lithium-oxide battery", "Li2O battery", "Li₂O battery", "Lithium oxide cell", "Li2O cell", "Lithium-oxide electrochemical cell"],
+  "LiO2": ["LiO", "Li-O", "Li/O", "Li–O", "Lithium oxide battery", "lithium oxide battery", "Lithium-oxide battery", "lithium-oxide battery", "Li2O battery", "Li2O battery", "Lithium oxide cell", "Li2O cell", "Lithium-oxide electrochemical cell"],
   "Mg": ["Mg", "Mg2+", "Magnesium", "magnesium", "Mg metal", "Magnesium metal", "magnesium metal", "Mg⁰", "Mg(0)", "metallic magnesium", "Metallic Magnesium"],
   "Na": ["Na", "Na+", "Sodium", "sodium", "Na metal", "Sodium metal", "sodium metal", "Na⁰", "Na(0)", "metallic sodium", "Metallic Sodium"],
   "K": ["K", "K+", "Potassium", "potassium", "K metal", "Potassium metal", "potassium metal", "K⁰", "K(0)", "metallic potassium", "Metallic Potassium"],
@@ -125,7 +125,7 @@ function renderArticles() {
         </button>
       </div>
       <div class="collapse show" id="collapse-${year}">
-        <div class="table-responsive">
+        <div class="table-responsive bg-light rounded-3 p-3">
           <table class="table table-striped table-hover align-middle">
             <thead class="table-dark">
               <tr>

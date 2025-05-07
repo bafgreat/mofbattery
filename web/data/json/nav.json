@@ -1,8 +1,8 @@
 [
     { "label": "Home", "href": "index.html" },
     { "label": "Li", "href": "html/Li.html" },
-    { "label": "LiO2", "href": "html/Li_O_2.html" },
-    { "label": "LS", "href": "html/Li_S.html" },
+    { "label": "LiO2", "href": "html/LiO2.html" },
+    { "label": "LS", "href": "html/LiS.html" },
     { "label": "Na", "href": "html/Na.html" },
     { "label": "K", "href": "html/K.html" },
     { "label": "Mg", "href": "html/Mg.html" },

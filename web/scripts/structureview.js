@@ -55,7 +55,8 @@
 
     const { cell, positions, symbols } = data;
     const viewer = $3Dmol.createViewer(viewerElement, {
-      backgroundColor: 'white',
+      backgroundColor: 'black',
+
       defaultcolors: $3Dmol.elementColors.defaultColors
     });
 
@@ -134,7 +135,7 @@
         start: { x: start[0], y: start[1], z: start[2] },
         end: { x: end[0], y: end[1], z: end[2] },
         radius: 0.05,
-        color: 'black',
+        color: 'white',
         fromCap: 1,
         toCap: 1
       });

@@ -110,12 +110,18 @@ main {
   padding: 1rem 0;
   margin-top: auto;
 }
-
 .structure-canvas {
+  width: 100%;
+  max-width: 960px;
+  height: 400px;
+  background: #fff;
+  margin: 0 auto;               /* centers block horizontally */
   display: flex;
-  margin-top: 1rem;
-  
+  justify-content: center;     /* centers 3Dmol canvas horizontally */
+  align-items: center;         /* centers it vertically */
+  border-radius: 0.5rem;
 }
+
 
 .clickable {
   cursor: pointer;
@@ -129,7 +135,7 @@ main {
 }
 
 .table {
-  background-color: #ffffff;
+  background-color: transparent;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 0.75rem;
@@ -162,3 +168,9 @@ main {
   font-weight: bold;
 }
 
+canvas[id^="viewer-"] {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
