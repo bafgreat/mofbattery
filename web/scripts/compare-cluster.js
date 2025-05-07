@@ -337,7 +337,7 @@ class ClusterComparison extends HTMLElement {
       const canvasId = `${prop.key.replace(/[^a-zA-Z0-9]/g, '')}Scatter`;
 
       const col = document.createElement('div');
-      col.className = 'col';
+      col.className = 'col my-4';
       col.innerHTML = `
         <div class="chart-card">
           <div class="chart-title">Energy vs ${prop.label}</div>
@@ -440,14 +440,7 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
       <thead class="table-info">
         <tr>
           <th>Refcode</th>
-          <th>ASA (m²/cm³)</th>
-          <th>Void Fraction</th>
-          <th>LCD (Å)</th>
-          <th>PLD (Å)</th>
-          <th># Channels</th>
-          <th>CN</th>
-          <th>Metal</th>
-          <th>OMS</th>
+
           <th>BDE (kcal/mol)</th>
         </tr>
       </thead>
@@ -455,14 +448,7 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
         ${entries.map((entry, i) => `
           <tr class="clickable" data-index="${i}" data-cluster="${clusterId}">
             <td>${entry.refcode || ''}</td>
-            <td>${entry['ASA_m^2/cm^3'] || ''}</td>
-            <td>${entry['AV_Volume_fraction'] || ''}</td>
-            <td>${entry['LCD_A'] || ''}</td>
-            <td>${entry['PLD_A'] || ''}</td>
-            <td>${entry['Number_of_channels'] || ''}</td>
-            <td>${entry['cn'] || ''}</td>
-            <td>${entry['metal'] || ''}</td>
-            <td>${entry['is_open'] ? 'Yes' : 'No'}</td>
+
             <td>${entry['energy'] || ''}</td>
           </tr>
         `).join('')}
@@ -560,3 +546,22 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
 }
 
 customElements.define('cluster-comparison', ClusterComparison);
+
+// <th>ASA (m²/cm³)</th>
+// <th>Void Fraction</th>
+// <th>LCD (Å)</th>
+// <th>PLD (Å)</th>
+// <th># Channels</th>
+// <th>CN</th>
+// <th>Metal</th>
+// <th>OMS</th>
+
+
+// <td>${entry['ASA_m^2/cm^3'] || ''}</td>
+// <td>${entry['AV_Volume_fraction'] || ''}</td>
+// <td>${entry['LCD_A'] || ''}</td>
+// <td>${entry['PLD_A'] || ''}</td>
+// <td>${entry['Number_of_channels'] || ''}</td>
+// <td>${entry['cn'] || ''}</td>
+// <td>${entry['metal'] || ''}</td>
+// <td>${entry['is_open'] ? 'Yes' : 'No'}</td>
