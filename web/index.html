@@ -22,11 +22,14 @@
       <h1>Welcome</h1>
     <p>Come back later</p>
     <div class="container my-4">
-      <h3 class="mb-3">Upload Structure to Visualize</h3>
-      <div class="mb-3">
-        <input type="file" class="form-control" id="fileInput" accept=".json">
-      </div>
-      <div id="viewer" class="border"></div>
+      <h1>Explore Solid-State Physics</h1>
+
+      <effective-mass></effective-mass>
+      <band-structure></band-structure>
+      <projected-dos></projected-dos>
+      <neb-diffusion></neb-diffusion>
+      <theoretical-capacity></theoretical-capacity>
+      <open-circuit-voltage></open-circuit-voltage>
     </div>
     </div>
   </div>
@@ -44,7 +47,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.js"></script>
 
   <!-- Your script that uses 3Dmol and math.js -->
-  <script src="scripts/structureview.js"></script>
+  <script src="scripts/explanation.js"></script>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
 </body>
 </html>
 

@@ -25,7 +25,7 @@ class ClusterComparison extends HTMLElement {
         }
 
       .chart-card {
-          background:black;
+          background:#222831;
           border-radius: 1rem;
           padding: 1rem;
           justify-content: center;
@@ -99,25 +99,69 @@ class ClusterComparison extends HTMLElement {
         }
 
     table {
-        background-color:transparent; ;
-        border-radius: 0.5rem;
+        background-color: #222831;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 12px;
         overflow: hidden;
-      }
-
-      th {
-        background-color:transparent;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        color: #eeeeee;
+        font-size: 0.95rem;
+    }
+    thead th {
+        background-color: #393E46;
         text-align: center;
         font-weight: 600;
-        color: #333;
-        font-size: 1rem;
-      }
+        color: #00ADB5;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+        padding: 12px 16px;
+        border-bottom: 1px solid #2c2f34;
+    }
 
-      td {
+    tbody td {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #eeeeee;
+      padding: 10px 14px;
+      border-bottom: 1px solid #2c2f34;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+     th {
+        background-color: #393E46;
         text-align: center;
-        font-size: 0.95rem;
-        color: #444;
+        font-weight: 600;
+        color: #00ADB5;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+  tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+  tr.clickable {
+        cursor: pointer;
+    }
+
+
+
+    td {
+          text-align: center;
+          font-size: 0.95rem;
+          color: #eeeeee;
+      }
+      tr.clickable {
+          cursor: pointer;
+          transition: background-color 0.3s, box-shadow 0.3s;
       }
 
+      tr.clickable:hover td {
+          background-color: #00ADB5;
+          color: #222831;
+          box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+      }
       .viewer-section {
         margin-top: 1.5rem;
         padding: 1rem;
@@ -132,7 +176,7 @@ class ClusterComparison extends HTMLElement {
         color: #4A90E2;
       }
 
-        .viewer-section p {
+      .viewer-section p {
           text-align: center;
           color: #666;
         }
@@ -440,7 +484,6 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
       <thead class="table-info">
         <tr>
           <th>Refcode</th>
-
           <th>BDE (kcal/mol)</th>
         </tr>
       </thead>
@@ -448,7 +491,6 @@ this.createFrequencyChartByCluster('Number of Channels by Cluster', 'Number_of_c
         ${entries.map((entry, i) => `
           <tr class="clickable" data-index="${i}" data-cluster="${clusterId}">
             <td>${entry.refcode || ''}</td>
-
             <td>${entry['energy'] || ''}</td>
           </tr>
         `).join('')}

@@ -13,11 +13,11 @@ class MOFChartComponent extends HTMLElement {
             font-family: 'Playfair Display', serif;
             letter-spacing: 0.5px;
             line-height: 1.6;
-            background-color:#083c5d;
+            background-color:#222831;
           }
 
           .card {
-            background:black;
+            background:#222831;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
             padding: 1rem;

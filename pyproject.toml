@@ -20,3 +20,5 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 analyse_structure = "mofbattery.cli.cli:main"
+plot_dos= "mofbattery.es.plot_dos:main"
+plot_bandstructure = "mofbattery.es.band_structure:main"
