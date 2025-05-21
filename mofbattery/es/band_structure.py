@@ -90,21 +90,6 @@ class BandStructure:
 
         return ase_atoms
 
-    def get_seekpath_data(self):
-        """
-        Get the k-path and labels using seekpath.
-        """
-        ase_atoms = self.get_ase_atom()
-        cell = ase_atoms.get_cell()
-        scaled_positions = ase_atoms.get_scaled_positions()
-        atomic_numbers = ase_atoms.get_atomic_numbers()
-
-        structure = (cell, scaled_positions, atomic_numbers)
-        path_data = seekpath.get_path(structure)
-
-        return path_data
-
-
 
     def plot(self):
         energies = self.get_energies()
@@ -115,15 +100,18 @@ class BandStructure:
         fig, ax = plt.subplots(figsize=(16, 10), dpi=150)
         colors = cm.viridis(np.linspace(0, 1, energies.shape[2]))
 
+        linestyles = ['-', '--']  # spin up: solid, spin down: dashed
         for spin in range(energies.shape[0]):
             for band in range(energies.shape[2]):
-                ax.plot(kpath, energies[spin, :, band] - shift, color=colors[band], lw=2.5)
+                ax.plot(kpath, energies[spin, :, band] - shift,
+                        color=colors[band],
+                        lw=2.0, linestyle=linestyles[spin])
 
         fermi_line = ax.axhline(y=0 if self.shift_to_fermi else fermi, color='darkred', lw=2.5, linestyle='--')
 
         xtick_labels_latex = [self.latexify_label(lbl) for lbl in xtick_labels_raw]
         # xtick_locs, xtick_labels = filter_xticks_and_labels(xtick_locs, xtick_labels_latex)
-        xtick_locs, xtick_labels = filter_xticks_and_labels(xtick_locs, xtick_labels_latex, min_spacing=0.5)
+        xtick_locs, xtick_labels = filter_xticks_and_labels(xtick_locs, xtick_labels_latex)
 
         ax.set_xticks(xtick_locs)
         ax.set_xticklabels(xtick_labels, fontsize=14)
@@ -137,12 +125,20 @@ class BandStructure:
         ax.set_ylim(*self.ylim)
 
         legend_handles = [(fermi_line, "Fermi Level")]
+        legend_handles.append(ax.plot([], [], color='black', linestyle='-', label='Spin Up')[0])
+        legend_handles.append(ax.plot([], [], color='black', linestyle='--', label='Spin Down')[0])
+
 
         # if self.has_bandgap():
         vbm = self.get_top_valence_band()
         cbm = self.get_bottom_conduction_band()
-        vbm_k = self.get_coords_top_valence_band()[0]
-        cbm_k = self.get_coords_bottom_conduction_band()[0]
+        # vbm_k = self.get_coords_top_valence_band()[0]
+        # cbm_k = self.get_coords_bottom_conduction_band()[0]
+        vbm_frac = self.get_coords_top_valence_band()[0]
+        cbm_frac = self.get_coords_bottom_conduction_band()[0]
+        vbm_k = self.get_1d_kpoint_position(vbm_frac)
+        cbm_k = self.get_1d_kpoint_position(cbm_frac)
+
         direct = vbm_k == cbm_k
         gap = self.get_band_gap()
 
@@ -164,6 +160,33 @@ class BandStructure:
             plt.savefig(self.save_path)
         else:
             plt.show()
+
+
+    def get_1d_kpoint_position(self, target_frac_kpt, atol=1e-3):
+        """
+        Maps a 3D fractional k-point (from CoordsTopValenceBand/CoordsBottomConductionBand)
+        to the 1D x-axis value used in the band structure plot.
+        """
+        n_edges = self.rkf_data.read("band_curves", "nEdges")
+        total_offset = 0.0
+
+        for edge in range(1, n_edges + 1):
+            try:
+                frac_kpts = np.array(self.rkf_data.read("band_curves", f"Edge_{edge}_kPoints"))
+                x_k = np.array(self.rkf_data.read("band_curves", f"Edge_{edge}_xFor1DPlotting"))
+                frac_kpts = frac_kpts.reshape((-1, 3))
+
+                for i, kpt in enumerate(frac_kpts):
+                    if np.allclose(kpt, target_frac_kpt, atol=atol):
+                        return total_offset + x_k[i]
+                total_offset += x_k[-1]
+            except Exception as e:
+                print(f"[WARNING] Error reading edge {edge}: {e}")
+                continue
+
+        print(f"[WARNING] Could not find 1D x-coordinate for fractional k-point {target_frac_kpt}")
+        return None
+
 
     def get_energies(self):
         n_bands = self.rkf_data.read("band_curves", "nBands")
@@ -262,7 +285,7 @@ class BandStructure:
             return str(lbl)
 
 
-def filter_xticks_and_labels(locations, labels, min_spacing=10):
+def filter_xticks_and_labels(locations, labels, min_spacing=0.01):
     filtered_locs, filtered_labels = [], []
     last_x = -np.inf
     for loc, lbl in zip(locations, labels):
