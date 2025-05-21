@@ -12,6 +12,7 @@ mofstructure = "^0.1.8.3"
 torch-geometric = "^2.6.1"
 torch = "2.2.0"
 read-rkf = "^0.1.1"
+seekpath = "^2.1.0"
 
 
 [build-system]
@@ -22,3 +23,4 @@ build-backend = "poetry.core.masonry.api"
 analyse_structure = "mofbattery.cli.cli:main"
 plot_dos= "mofbattery.es.plot_dos:main"
 plot_bandstructure = "mofbattery.es.band_structure:main"
+ams_input_bandstructure ="mofbattery.cli.cli:ams_bandstructure"

@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 from mofbattery.cheminformatic.analyser import FunctionalGroupAnalyzer
+from mofbattery.read_write.filetyper import ams_bandstructure_input
 
 
 def main():
@@ -74,3 +75,16 @@ def main():
             tf.write(f"    Atom Indices: {ring['atom_indices']}\n")
 
     print(f"Text summary written to: {txt_file}")
+
+
+def ams_bandstructure():
+    """
+    Function to generate AMS band structure input.
+    """
+    parser = argparse.ArgumentParser(description="Generate AMS band structure input.")
+    parser.add_argument("cif_file", help="Path to the CIF file.")
+    args = parser.parse_args()
+
+    # Generate AMS band structure input
+    ams_bandstructure_input(args.cif_file)
+    print(f"AMS band structure input generated for: {args.cif_file}")

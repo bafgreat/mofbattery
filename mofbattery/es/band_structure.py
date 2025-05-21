@@ -8,9 +8,11 @@ License: MIT
 import argparse
 import re
 import numpy as np
+from ase import Atoms
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 from read_rkf.parserkf import KFFile
+import seekpath
 
 plt.rcParams.update({'font.family': 'serif', 'font.size': 14})
 
@@ -65,13 +67,52 @@ class BandStructure:
     def has_bandgap(self):
         return self.get_bands().get('HasGap')
 
+    def get_ase_atom(self):
+        """
+        Convert the BAND data to ASE Atoms object.
+        """
+        molecule = self.rkf_data.read_section('Molecule')
+        nAtoms = molecule.get('nAtoms')
+        cell = molecule.get('LatticeVectors', None)
+        positions = np.array(molecule.get('Coords')).reshape(nAtoms, 3)
+        symbols = molecule.get('AtomSymbols').split()
+
+        ase_atoms = Atoms(
+            symbols=symbols,
+            positions=positions
+        )
+
+        if cell is not None:
+            n_vec = molecule.get('nLatticeVectors')
+            cell = np.array(cell).reshape(n_vec, n_vec)
+            ase_atoms.set_cell(cell)
+            ase_atoms.set_pbc(True)
+
+        return ase_atoms
+
+    def get_seekpath_data(self):
+        """
+        Get the k-path and labels using seekpath.
+        """
+        ase_atoms = self.get_ase_atom()
+        cell = ase_atoms.get_cell()
+        scaled_positions = ase_atoms.get_scaled_positions()
+        atomic_numbers = ase_atoms.get_atomic_numbers()
+
+        structure = (cell, scaled_positions, atomic_numbers)
+        path_data = seekpath.get_path(structure)
+
+        return path_data
+
+
+
     def plot(self):
         energies = self.get_energies()
         kpath, xtick_locs, xtick_labels_raw = self.get_kpoints_and_labels()
         fermi = self.get_fermi_energy()
         shift = fermi if self.shift_to_fermi else 0
 
-        fig, ax = plt.subplots(figsize=(16, 8), dpi=150)
+        fig, ax = plt.subplots(figsize=(16, 10), dpi=150)
         colors = cm.viridis(np.linspace(0, 1, energies.shape[2]))
 
         for spin in range(energies.shape[0]):
@@ -97,23 +138,23 @@ class BandStructure:
 
         legend_handles = [(fermi_line, "Fermi Level")]
 
-        if self.has_bandgap():
-            vbm = self.get_top_valence_band()
-            cbm = self.get_bottom_conduction_band()
-            vbm_k = self.get_coords_top_valence_band()[0]
-            cbm_k = self.get_coords_bottom_conduction_band()[0]
-            direct = vbm_k == cbm_k
-            gap = self.get_band_gap()
+        # if self.has_bandgap():
+        vbm = self.get_top_valence_band()
+        cbm = self.get_bottom_conduction_band()
+        vbm_k = self.get_coords_top_valence_band()[0]
+        cbm_k = self.get_coords_bottom_conduction_band()[0]
+        direct = vbm_k == cbm_k
+        gap = self.get_band_gap()
 
-            vbm_marker = ax.plot(vbm_k, vbm - shift, 'o', color='#1f77b4', markersize=13)[0]
-            cbm_marker = ax.plot(cbm_k, cbm - shift, 'o', color='#d62728', markersize=13)[0]
+        vbm_marker = ax.plot(vbm_k, vbm - shift, 'o', color='#1f77b4', markersize=13)[0]
+        cbm_marker = ax.plot(cbm_k, cbm - shift, 'o', color='#d62728', markersize=13)[0]
 
-            legend_handles.extend([
-                (cbm_marker, f'CBM ({cbm:.2f} eV)'),
-                (vbm_marker, f'VBM ({vbm:.2f} eV)'),
-                (ax.plot([], [], ' ', label=f'Gap = {gap:.2f} eV ({"Direct" if direct else "Indirect"})')[0],
-                 f'BG : {gap:.2f} eV ({"Direct" if direct else "Indirect"})')
-            ])
+        legend_handles.extend([
+            (cbm_marker, f'CBM ({cbm:.2f} eV)'),
+            (vbm_marker, f'VBM ({vbm:.2f} eV)'),
+            (ax.plot([], [], ' ', label=f'Gap = {gap:.2f} eV ({"Direct" if direct else "Indirect"})')[0],
+                f'BG : {gap:.2f} eV ({"Direct" if direct else "Indirect"})')
+        ])
 
         ax.legend(*zip(*legend_handles), fontsize=12, loc='upper left', bbox_to_anchor=(1, 0.5))
         # ax.set_title("Band Structure", fontsize=18, weight='bold')
