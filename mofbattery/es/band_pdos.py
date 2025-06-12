@@ -71,9 +71,9 @@ def plot_combined(rkf_path, ylim=(-5, 5), shift_to_fermi=True, energy_window=0.2
 
     # --- Total DOS ---
     total_dos = raw_pdos.sum(axis=0)[energy_mask]
-    ax_pdos.plot(total_dos, energies_ev, color='black', linestyle='-', linewidth=1.5, label='Total DOS')
+    ax_pdos.plot(total_dos, energies_ev, color='black', linestyle='-', linewidth=2.5, label='Total DOS')
 
-    ax_pdos.axhline(0 if shift_to_fermi else fermi_ev, color='darkred', linestyle='--', lw=1)
+    ax_pdos.axhline(0 if shift_to_fermi else fermi_ev, color='darkred', linestyle='--', lw=2.5, label='Fermi')
     ax_pdos.set_xlabel("DOS", fontsize=14)
     ax_pdos.tick_params(labelleft=False)
     ax_pdos.set_xlim(left=0)
