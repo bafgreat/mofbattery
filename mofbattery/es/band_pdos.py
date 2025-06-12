@@ -42,7 +42,7 @@ def plot_combined(rkf_path, ylim=(-5, 5), shift_to_fermi=True, energy_window=0.2
     ax_band.set_xticklabels(xtick_labels, fontsize=12)
     for x in xtick_locs:
         ax_band.axvline(x, color='gray', linestyle='--', linewidth=0.8)
-    ax_band.axhline(0 if shift_to_fermi else fermi, color='darkred', linestyle='--', lw=1)
+    ax_band.axhline(0 if shift_to_fermi else fermi, color='darkred', linestyle='--', lw=1.5)
     ax_band.set_ylim(*ylim)
 
     # --- Band Gap Annotation ---
