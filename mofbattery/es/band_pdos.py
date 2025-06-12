@@ -72,7 +72,7 @@ def plot_combined(rkf_path, ylim=(-5, 5), shift_to_fermi=True, energy_window=0.2
     # --- Total DOS ---
     # --- Total DOS ---
     total_dos = raw_pdos.sum(axis=0)[energy_mask]
-    total_dos_line, = ax_pdos.plot(total_dos, energies_ev, color='black', linestyle='-', linewidth=2.5, label='Total DOS')
+    total_dos_line, = ax_pdos.plot(total_dos, energies_ev, color='black', linestyle='-', linewidth=1.5, label='Total DOS')
 
     fermi_line = ax_pdos.axhline(0 if shift_to_fermi else fermi_ev, color='darkred', linestyle='--', lw=2.5, label='Fermi')
 
@@ -83,7 +83,7 @@ def plot_combined(rkf_path, ylim=(-5, 5), shift_to_fermi=True, energy_window=0.2
     handles, labels = zip(*all_handles_sorted) if all_handles_sorted else ([], [])
 
     handles += (total_dos_line, fermi_line)
-    labels += ("Total DOS", "Fermi")
+    labels += ("Fermi", "Total DOS")
 
     # --- Legend in PDOS bottom-right ---
     # all_handles_sorted = sorted(all_handles, key=lambda h: h[1])
@@ -111,14 +111,12 @@ def plot_combined(rkf_path, ylim=(-5, 5), shift_to_fermi=True, energy_window=0.2
         handletextpad=0.5,
         handlelength=1.2
     )
-
-
     # Save and show
     # plt.subplots_adjust(right=0.88)
     plt.subplots_adjust(left=0.08, right=0.88, bottom=0.1, top=0.95, wspace=0.1)
 
     # plt.tight_layout()
-    plt.savefig(save_path, bbox_inches='tight')
+    plt.savefig(save_path, bbox_inches='tight', dpi=600)
     plt.show()
 
 
