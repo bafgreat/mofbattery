@@ -70,26 +70,33 @@ def plot_combined(rkf_path, ylim=(-5, 5), shift_to_fermi=True, energy_window=0.2
         all_handles.append((Rectangle((0, 0), 1, 1, color=color), symbol))
 
     # --- Total DOS ---
+    # --- Total DOS ---
     total_dos = raw_pdos.sum(axis=0)[energy_mask]
-    ax_pdos.plot(total_dos, energies_ev, color='black', linestyle='-', linewidth=2.5, label='Total DOS')
+    total_dos_line, = ax_pdos.plot(total_dos, energies_ev, color='black', linestyle='-', linewidth=2.5, label='Total DOS')
 
-    ax_pdos.axhline(0 if shift_to_fermi else fermi_ev, color='darkred', linestyle='--', lw=2.5, label='Fermi')
+    fermi_line = ax_pdos.axhline(0 if shift_to_fermi else fermi_ev, color='darkred', linestyle='--', lw=2.5, label='Fermi')
+
     ax_pdos.set_xlabel("DOS", fontsize=14)
     ax_pdos.tick_params(labelleft=False)
     ax_pdos.set_xlim(left=0)
+    all_handles_sorted = sorted(all_handles, key=lambda h: h[1])
+    handles, labels = zip(*all_handles_sorted) if all_handles_sorted else ([], [])
+
+    handles += (total_dos_line, fermi_line)
+    labels += ("Total DOS", "Fermi")
 
     # --- Legend in PDOS bottom-right ---
-    all_handles_sorted = sorted(all_handles, key=lambda h: h[1])
+    # all_handles_sorted = sorted(all_handles, key=lambda h: h[1])
     # handles, labels = zip(*all_handles_sorted)
-    handles, labels = zip(*all_handles_sorted) if all_handles_sorted else ([], [])
+    # handles, labels = zip(*all_handles_sorted) if all_handles_sorted else ([], [])
 
 
     # Add Fermi + gap annotation
-    handles += (
-        Line2D([0], [0], color='darkred', linestyle='--', lw=1),
-        Line2D([0], [0], color='none')
-    )
-    labels += ("Fermi", "Total DOS")
+    # handles += (
+    #     Line2D([0], [0], color='darkred', linestyle='--', lw=1),
+    #     Line2D([0], [0], color='none')
+    # )
+    # labels += ("Fermi", "Total DOS")
 
     ax_pdos.legend(
         handles,
