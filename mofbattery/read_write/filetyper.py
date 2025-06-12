@@ -153,6 +153,11 @@ def ams_bandstructure_input(file_path):
     new_input.append('      CalcPDOS Yes\n')
     new_input.append('    End\n')
 
+    new_input.append('    KSpace\n')
+    new_input.append('      Type Symmetric\n')
+    new_input.append('      Quality Good\n')
+    new_input.append('    End\n')
+
     new_input.append('    BZPath\n')
     new_input.extend(k_path)
     new_input.append('\n')

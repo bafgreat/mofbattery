@@ -88,3 +88,5 @@ def ams_bandstructure():
     # Generate AMS band structure input
     ams_bandstructure_input(args.cif_file)
     print(f"AMS band structure input generated for: {args.cif_file}")
+
+

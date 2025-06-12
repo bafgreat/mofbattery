@@ -289,7 +289,14 @@ class PDOSPlotter:
             index += 0.1
 
         total_dos = np.sum(raw_pdos, axis=0)[energy_mask]
-        ax.plot(total_dos, energies_ev, color='black', linewidth=1.5, label='Total DOS')
+        ax.plot(total_dos, energies_ev, color='black', linestyle='--', linewidth=1.5, alpha=0.6, label='Total DOS')
+        # ax.fill_betweenx(energies_ev,
+        #          0,
+        #          total_dos,
+        #          color='black',
+        #          alpha=0.9,
+        #          label='Total DOS')
+
         fermi_line = 0 if self.shift_to_fermi else fermi_ev
         ax.axhline(fermi_line,
                    linestyle='-',
