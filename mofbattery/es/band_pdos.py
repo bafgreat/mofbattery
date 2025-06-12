@@ -37,6 +37,7 @@ def plot_combined(rkf_path, ylim=(-5, 5), shift_to_fermi=True, energy_window=0.2
                          linestyle=linestyles[spin] if energies.shape[0] == 2 else '-')
 
     ax_band.set_ylabel("Energy (eV)", fontsize=14)
+    ax_band.set_xlabel("k-path", fontsize=14)
     ax_band.set_xticks(xtick_locs)
     ax_band.set_xticklabels(xtick_labels, fontsize=12)
     for x in xtick_locs:
