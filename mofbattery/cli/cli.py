@@ -2,7 +2,7 @@ import argparse
 import json
 import os
 from mofbattery.cheminformatic.analyser import FunctionalGroupAnalyzer
-from mofbattery.read_write.filetyper import ams_bandstructure_input
+from mofbattery.read_write import filetyper
 
 
 def main():
@@ -86,7 +86,17 @@ def ams_bandstructure():
     args = parser.parse_args()
 
     # Generate AMS band structure input
-    ams_bandstructure_input(args.cif_file)
+    filetyper.ams_bandstructure_input(args.cif_file)
     print(f"AMS band structure input generated for: {args.cif_file}")
+
+def window_ams():
+    parser = argparse.ArgumentParser(description="Generate AMS files for electrochemical window.")
+    parser.add_argument("file_path", help="File path to the structure file. (cif, gjf, qcout, out and any ase supported format)")
+    args = parser.parse_args()
+
+    filetyper.ams_ea_ip(args.file_path, charge=0)
+    filetyper.ams_ea_ip(args.file_path, charge=1)
+    filetyper.ams_ea_ip(args.file_path, charge=-1)
+
 
 

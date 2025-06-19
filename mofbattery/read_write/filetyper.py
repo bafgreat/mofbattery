@@ -8,6 +8,7 @@ from ase.io import read
 import numpy as np
 from ase.data import chemical_symbols
 from mofstructure import filetyper as read_writer
+from mofbattery.read_write import coordinates
 
 
 class NumpyJSONEncoder(json.JSONEncoder):
@@ -181,6 +182,64 @@ def ams_bandstructure_input(file_path):
 
 
 
+def ams_ea_ip(file_path, charge=0):
+    """
+    create input for ams band structure calculations and pdos calculations
+
+    **parameters:**
+        file_path (str): The path to the .band file.
+    """
+    coords, lattice = coordinates.Coords(file_path)
+
+    new_input = ['#!/bin/sh\n\n', '$ADFBIN/ams << eor\n\n', "Task SinglePoint\n", "System\n"]
+    new_input.append(f'  Charge {charge}\n')
+    new_input.append(  "  Atoms\n")
+    new_input.append( "\n".join(coords) + "\n")
+    new_input.append('   End\n\n')
+    new_input.append('   Lattice\n')
+    new_input.append("\n".join(lattice) + "\n")
+    new_input.append('   End\n')
+    new_input.append('End\n\n')
+    new_input.append('\n')
+    new_input.append('Engine BAND\n')
+
+    new_input.append('  Basis\n')
+    new_input.append('      Type TZ2P\n')
+    new_input.append('      Core None\n')
+    new_input.append('  End\n')
+
+    new_input.append('  Relativity\n\n')
+    new_input.append('       Level Spin-Orbit\n')
+    new_input.append('  End\n')
+    if charge !=0:
+        new_input.append('NeutralizingDensity rho(homogeneous)\n')
+
+
+    new_input.append('NumericalQuality Normal\n')
+
+    new_input.append('   XC\n')
+    new_input.append('       SpinOrbitMagnetization CollinearZ\n')
+    new_input.append('       LibXC r2SCAN\n')
+    new_input.append('       DISPERSION GRIMME4\n')
+    new_input.append('    End\n')
+    new_input.append('EndEngine\n\n')
+
+
+
+    base_path = os.path.basename(file_path).split(".")[0]
+    base_folder = 'neutral'
+    if charge > 0:
+        base_folder = 'positive'
+    elif charge < 0:
+        base_folder = 'negative'
+    full_path = os.path.join(base_path, base_folder)
+    os.makedirs(full_path, exist_ok=True)
+    save_path = os.path.join(full_path, f"{base_path}.run")
+
+    read_writer.put_contents(save_path, new_input)
+    os.chmod(save_path, 0o755)
+
+    
 
 
 
